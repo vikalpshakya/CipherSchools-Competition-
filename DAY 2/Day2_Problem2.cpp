@@ -29,7 +29,7 @@
     }
 
  int largestRectangle(vector < int > & heights) {
-        int n = heights.size();
+        int n = heights.size(); 
         vector<int> next(n);
         next = nextSmall(heights, n);
 
