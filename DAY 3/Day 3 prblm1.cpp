@@ -2,7 +2,7 @@
 
 int memo[55][55];
 
-int sum(const vector<int>& freq, int i, int j) {
+int sum(vector<int>& freq, int i, int j) {
   int total = 0;
   for (int k = i; k <= j; ++k) {
     total += freq[k];
@@ -10,7 +10,7 @@ int sum(const vector<int>& freq, int i, int j) {
   return total;
 }
 
-int solve(const vector<int>& freq, int i, int j) {
+int solve( vector<int>& freq, int i, int j) {
   if (i > j) {
     return 0;
   }
@@ -32,7 +32,7 @@ int solve(const vector<int>& freq, int i, int j) {
   return memo[i][j];
 }
 
-int optimalCost(const vector<int>& keys, const vector<int>& freq, int n) {
+int optimalCost( vector<int>& keys,  vector<int>& freq, int n) {
   memset(memo, -1, sizeof(memo));
   return solve(freq, 0, n - 1);
 }
