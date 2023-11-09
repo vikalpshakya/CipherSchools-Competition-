@@ -3,7 +3,7 @@ BinaryTreeNode<int>* createParentMapping(BinaryTreeNode<int>* root, map <BinaryT
 
     if(root == NULL) return(NULL);   
     BinaryTreeNode<int>* targetNode = NULL;
-    queue<BinaryTreeNode<int>*> que;
+    queue<BinaryTreeNode<int>*> que; 
     que.push(root);
     nodeToParent[root] = NULL;
     while(!que.empty()){
